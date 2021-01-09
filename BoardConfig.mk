@@ -96,8 +96,18 @@ TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_INCLUDE_RESETPROP := true
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 120
-
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hidl.base@1.0 \
+    libion \
+    libxml2 \
+    libicuuc.so
     
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.base@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so
+
 # TWRP Debug Flags
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
