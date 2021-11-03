@@ -15,7 +15,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
@@ -33,11 +32,10 @@ $(call inherit-product, vendor/omni/config/gsm.mk)
 TARGET_BOARD_PLATFORM := msm8953
 
 PRODUCT_PROPERTY_OVERRIDES += ro.hardware.keystore=$(TARGET_BOARD_PLATFORM)
-    
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A001D
 PRODUCT_NAME := omni_A001D
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_A001D
 PRODUCT_MANUFACTURER := asus
-PRODUCT_RELEASE_NAME := ASUS_A001D

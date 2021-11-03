@@ -15,12 +15,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 LOCAL_PATH := device/asus/A001D
 
 PRODUCT_PACKAGES += \
     qcom_decrypt \
-    qcom_decrypt_fbe \
+    qcom_decrypt_fbe
 
-    
 PRODUCT_PACKAGES += tzdata_twrp
