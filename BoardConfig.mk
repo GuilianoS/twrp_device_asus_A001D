@@ -102,3 +102,68 @@ TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
 # TWRP Debug Flags
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
+
+
+SHRP_DEVICE_CODE := ASUS_A001D
+SHRP_PATH := device/asus/A001D
+SHRP_MAINTAINER := GuilianoS
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A_Only
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_EDL_MODE := 1
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 0
+SHRP_STATUSBAR_RIGHT_PADDING := 20
+SHRP_STATUSBAR_LEFT_PADDING := 20
+SHRP_NOTCH := true
+SHRP_DARK := true
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+SHRP_NO_SAR_AUTOMOUNT := true
+# Addon - Substratum Overlay (OMS -Normal- disabler)
+# Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
+INC_IN_REC_ADDON_1 := true
+
+# Addon - Substratum Overlay (OMS -legacy- disabler)
+# Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
+INC_IN_REC_ADDON_2 := true
+
+# Addon - Clear Fingerprint (remove fingerprint lock from system)
+# Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
+INC_IN_REC_ADDON_3 := true
+
+# Addon - Force Encryption (remove force encryption from your device)
+# Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
+SHRP_SKIP_DEFAULT_ADDON_4 := true
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
+INC_IN_REC_ADDON_4 := true
+
+
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store magisk zip into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
+INC_IN_REC_MAGISK := true
+
+# Default (if not set) will show magisk root and unroot option inside the recovery.
+# To hide the prebuilt magisk flash option from recovery, set value to "true".
+# Ensure you understood the above note on the default behavior!
+SHRP_EXCLUDE_MAGISK_FLASH := true
